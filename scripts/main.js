@@ -1,5 +1,5 @@
-;(function(Game, UIManager) {
-    var uiManager = new UIManager();
-    var game = new Game(uiManager);
+;(function(Game) {
+    var game = new Game();
+
     game.start();
-})(window.brpg.Game, window.brpg.UIManager);
+})(brpg.Game);

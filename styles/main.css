@@ -4,7 +4,7 @@
 
 .event-log,
 .stats,
-.equipped-items,
+.equipment,
 .inventory {
     display: inline-block;
     height: 250px;
@@ -13,7 +13,7 @@
 
 .event-log,
 .stats,
-.equipped-items,
+.equipment,
 .inventory,
 .actions {
     padding: 10px;
@@ -25,7 +25,7 @@
 }
 
 .stats,
-.equipped-items,
+.equipment,
 .inventory {
     width: 200px;
 }

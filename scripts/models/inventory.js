@@ -2,7 +2,6 @@
     function Inventory() {
         var items = [];
 
-
         function addItem(item) {
             items.push(item);
         }
@@ -18,6 +17,7 @@
     }
 
     var brpg = window.brpg || {};
-    brpg.Inventory = Inventory;
+    brpg.models = brpg.models || {};
+    brpg.models.Inventory = Inventory;
     window.brpg = brpg;
 })(window);

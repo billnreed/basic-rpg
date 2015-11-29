@@ -1,0 +1,19 @@
+.inventory-item {
+
+}
+
+.inventory-item__name {
+
+}
+
+.inventory-item__action {
+    display: none;
+
+    float: right;
+
+    cursor: pointer;
+}
+
+.inventory-item:hover .inventory-item__action {
+    display: inline;
+}

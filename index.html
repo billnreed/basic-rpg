@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="styles/reset.css"/>
         <link rel="stylesheet" href="styles/main.css"/>
         <link rel="stylesheet" href="styles/pane.css"/>
+        <link rel="stylesheet" href="styles/inventory-item.css"/>
     </head>
     <body>
         <div class="container">
@@ -16,8 +17,8 @@
                 <div class="pane__title">Stats</div>
                 <ul class="pane__list"></ul>
             </div>
-            <div class="equipped-items pane">
-                <div class="pane__title">Equipped Items</div>
+            <div class="equipment pane">
+                <div class="pane__title">Equipment</div>
                 <ul class="pane__list"></ul>
             </div>
             <div class="inventory pane">
@@ -31,11 +32,24 @@
         </div>
 
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="scripts/inventory.js"></script>
+
+        <!--models-->
+        <script src="scripts/models/inventory.js"></script>
+        <script src="scripts/models/equipment.js"></script>
+
+        <!--view renderers-->
+        <script src="scripts/view-renderers/inventory-view-renderer.js"></script>
+
+        <!--view-responders-->
+        <script src="scripts/view-responders/inventory-view-responder.js"></script>
+
+        <!--controllers-->
+        <script src="scripts/controllers/inventory-controller.js"></script>
+
+        <!--game-->
         <script src="scripts/game.js"></script>
 
-        <script src="scripts/ui-manager.js"></script>
-
+        <!--entry point-->
         <script src="scripts/main.js"></script>
     </body>
 </html>
