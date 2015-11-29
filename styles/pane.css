@@ -1,12 +1,13 @@
 .pane {
-    border: 1px solid #555;
+    border: 1px solid #777;
     vertical-align: top;
     overflow-y: hidden;
 }
 
 .pane__title {
-    font-size: 20px;
     height: 10%;
+    font-size: 20px;
+    color: #777;
 }
 
 .pane__content,

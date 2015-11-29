@@ -1,9 +1,9 @@
 <html>
     <head>
         <title>Basic RPG</title>
-        <link rel="stylesheet" href="reset.css"/>
-        <link rel="stylesheet" href="main.css"/>
-        <link rel="stylesheet" href="pane.css"/>
+        <link rel="stylesheet" href="styles/reset.css"/>
+        <link rel="stylesheet" href="styles/main.css"/>
+        <link rel="stylesheet" href="styles/pane.css"/>
     </head>
     <body>
         <div class="container">
@@ -22,7 +22,7 @@
             </div>
             <div class="inventory pane">
                 <div class="pane__title">Inventory</div>
-                <ul class="pane__list"></ul>
+                <ul class="pane__list js-inventory-list"></ul>
             </div>
             <div class="actions pane">
                 <div class="pane__title">Actions</div>
@@ -31,5 +31,11 @@
         </div>
 
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="scripts/inventory.js"></script>
+        <script src="scripts/game.js"></script>
+
+        <script src="scripts/ui-manager.js"></script>
+
+        <script src="scripts/main.js"></script>
     </body>
 </html>
