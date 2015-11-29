@@ -1,0 +1,16 @@
+.pane {
+    border: 1px solid #555;
+    vertical-align: top;
+    overflow-y: hidden;
+}
+
+.pane__title {
+    font-size: 20px;
+    height: 10%;
+}
+
+.pane__content,
+.pane__list {
+    height: 90%;
+    overflow-y: scroll;
+}
