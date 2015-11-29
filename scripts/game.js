@@ -7,7 +7,8 @@
             //make inventory
             inventory = new Inventory();
             inventory.addItem('stick');
-            uiManager.updateInventory(inventory.getItemsList());
+            inventory.addItem('pants');
+            uiManager.updateInventoryWith(inventory.getItemsList());
 
             //make equipped items
             //make event log

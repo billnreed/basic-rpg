@@ -3,7 +3,7 @@
 
         var $inventoryList = $('.js-inventory-list');
 
-        function updateInventory(inventoryList) {
+        function updateInventoryWith(inventoryList) {
             console.log('updating inventory with', inventoryList);
             $inventoryList.empty();
 
@@ -11,12 +11,11 @@
                 $('<li>')
                     .text(item)
                     .appendTo($inventoryList);
-
             });
         }
 
         return {
-            updateInventory: updateInventory
+            updateInventoryWith: updateInventoryWith
         }
     }
 
