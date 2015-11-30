@@ -1,4 +1,5 @@
-;(function(window) {
+;
+(function(window) {
     function Inventory() {
         var items = [];
 

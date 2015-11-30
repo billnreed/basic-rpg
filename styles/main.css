@@ -3,7 +3,7 @@
 }
 
 .event-log,
-.stats,
+.character,
 .equipment,
 .inventory {
     display: inline-block;
@@ -12,7 +12,7 @@
 }
 
 .event-log,
-.stats,
+.character,
 .equipment,
 .inventory,
 .actions {
@@ -24,7 +24,7 @@
     width: 500px;
 }
 
-.stats,
+.character,
 .equipment,
 .inventory {
     width: 200px;

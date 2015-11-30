@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="styles/pane.css"/>
         <link rel="stylesheet" href="styles/inventory-item.css"/>
         <link rel="stylesheet" href="styles/equipment-item.css"/>
+        <link rel="stylesheet" href="styles/stat-listing.css"/>
     </head>
     <body>
         <div class="container">
@@ -14,9 +15,11 @@
                 <div class="pane__content">
                 </div>
             </div>
-            <div class="stats pane">
-                <div class="pane__title">Stats</div>
-                <ul class="pane__list"></ul>
+            <div class="character pane">
+                <div class="pane__title">Character</div>
+                <div class="pane__content">
+                    <dl class="js-character-stats"></dl>
+                </div>
             </div>
             <div class="equipment pane">
                 <div class="pane__title">Equipment</div>
@@ -37,14 +40,17 @@
         <!--models-->
         <script src="scripts/models/inventory.js"></script>
         <script src="scripts/models/equipment.js"></script>
+        <script src="scripts/models/character.js"></script>
 
         <!--views-->
         <script src="scripts/views/inventory-view.js"></script>
         <script src="scripts/views/equipment-view.js"></script>
+        <script src="scripts/views/character-view.js"></script>
 
         <!--controllers-->
         <script src="scripts/controllers/inventory-controller.js"></script>
         <script src="scripts/controllers/equipment-controller.js"></script>
+        <script src="scripts/controllers/character-controller.js"></script>
 
         <!--user actions-->
         <script src="scripts/user-actions.js"></script>

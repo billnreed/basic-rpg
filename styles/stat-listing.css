@@ -1,0 +1,17 @@
+.stat-listing {
+
+}
+
+.stat-listing__name,
+.stat-listing__value {
+    display: block;
+}
+
+.stat-listing__name {
+    float: left;
+}
+
+.stat-listing__name::after {
+    content: ':';
+    margin-right: 5px;
+}

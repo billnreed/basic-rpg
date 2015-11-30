@@ -1,5 +1,5 @@
-;(function(window) {
-
+;
+(function(window) {
     function Equipment() {
         var items = [];
 

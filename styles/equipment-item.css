@@ -7,7 +7,13 @@
 }
 
 .equipment-item__action {
+    display: none;
+
     float: right;
 
     cursor: pointer;
+}
+
+.equipment-item:hover .equipment-item__action {
+    display: inline;
 }

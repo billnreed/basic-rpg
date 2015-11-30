@@ -1,6 +1,6 @@
 ;(function(window) {
     function UserActions() {
-        var inventoryController, equipmentController;
+        var inventoryController, equipmentController, characterController;
 
         function equipItem(item) {
             inventoryController.removeItem(item);
@@ -20,11 +20,16 @@
             equipmentController = _equipmentController_;
         }
 
+        function setCharacterController(_characterController_) {
+            characterController = _characterController_;
+        }
+
         return {
             equipItem: equipItem,
             unequipItem: unequipItem,
             setInventoryController: setInventoryController,
-            setEquipmentController: setEquipmentController
+            setEquipmentController: setEquipmentController,
+            setCharacterController: setCharacterController
         }
     }
 
