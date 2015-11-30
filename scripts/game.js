@@ -1,12 +1,16 @@
-;(function(window, InventoryController, EquipmentController) {
+;(function(window, UserActions, InventoryController, EquipmentController) {
     var Game = function() {
+        var userActions;
         var inventoryController, equipmentController;
 
         function start() {
-            inventoryController = new InventoryController();
-            equipmentController = new EquipmentController();
+            userActions = new UserActions();
 
+            inventoryController = new InventoryController(userActions);
+            equipmentController = new EquipmentController(userActions);
 
+            userActions.setInventoryController(inventoryController);
+            userActions.setEquipmentController(equipmentController);
             //make event log
             //make actions
         }
@@ -19,4 +23,4 @@
     var brpg = window.brpg || {};
     brpg.Game = Game;
     window.brpg = brpg;
-})(window, window.brpg.controllers.InventoryController, window.brpg.controllers.EquipmentController);
+})(window, brpg.UserActions, brpg.controllers.InventoryController, brpg.controllers.EquipmentController);

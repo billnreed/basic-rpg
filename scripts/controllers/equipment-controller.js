@@ -2,6 +2,15 @@
     function EquipmentController() {
         var equipment = new Equipment();
         var view = new EquipmentView();
+
+        function addItem(item) {
+            equipment.addItem(item);
+            view.renderWith(equipment.getItemsList());
+        }
+
+        return {
+            addItem: addItem
+        };
     }
 
     var brpg = window.brpg;

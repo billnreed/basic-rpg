@@ -1,6 +1,7 @@
 ;(function(window, Inventory, InventoryView) {
 
-    function InventoryController() {
+    function InventoryController(_userActions_) {
+        var userActions = _userActions_;
         var inventory = new Inventory();
         var view = new InventoryView();
 
@@ -9,10 +10,19 @@
 
 
         view.onEquip(function(item) {
-            console.log('inventory item:', item);
+            userActions.equipItem(item);
         });
 
         view.renderWith(inventory.getItemsList());
+
+        function removeItem(item) {
+            inventory.removeItem(item);
+            view.renderWith(inventory.getItemsList());
+        }
+
+        return {
+            removeItem: removeItem
+        }
     }
 
     var brpg = window.brpg || {};
