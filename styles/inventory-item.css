@@ -10,8 +10,6 @@
     display: none;
 
     float: right;
-
-    cursor: pointer;
 }
 
 .inventory-item:hover .inventory-item__action {

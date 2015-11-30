@@ -15,7 +15,7 @@
 
                 var $inventoryItemEquipAction =
                     $('<span>')
-                        .addClass('inventory-item__action js-equip-item')
+                        .addClass('inventory-item__action action js-equip-item')
                         .text('equip')
                         .click(function() {
                                    onEquipCallback(item);

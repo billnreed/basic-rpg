@@ -15,7 +15,8 @@
             $roomActions.empty();
             roomInfo.actions.forEach(function(action) {
                 var $action =
-                    $('<div>')
+                    $('<span>')
+                        .addClass('action')
                         .text(action.label)
                         .click(function() {
                                    onActionCallback(action);

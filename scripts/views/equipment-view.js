@@ -20,7 +20,7 @@
 
                 var $equipmentItemAction =
                     $('<span>')
-                        .addClass('equipment-item__action')
+                        .addClass('equipment-item__action action')
                         .text('unequip')
                         .click(function() {
                                    onUnequipCallback(item);
