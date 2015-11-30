@@ -1,18 +1,19 @@
-;(function(window) {
+;(function(window, GoToNextRoomAction) {
     function EmptyRoom() {
         var title = 'Empty room';
         var description = 'It\'s an empty room.';
         var actions = [
             {
                 label: 'Go to next room',
-                action: brpg.actions.go_to_next_room
+                action: GoToNextRoomAction
             }
         ];
 
         function getRoomInfo() {
             return {
                 title: title,
-                description: description
+                description: description,
+                actions: actions
             };
         }
 
@@ -25,4 +26,4 @@
     brpg.rooms = brpg.rooms || {};
     brpg.rooms.EmptyRoom = EmptyRoom;
     window.brpg = brpg;
-})(window);
+})(window, brpg.actions.GoToNextRoomAction);

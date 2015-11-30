@@ -1,5 +1,6 @@
-;(function(window) {
+;(function(window, RoomFlowManager) {
     function ActionExecutor() {
+        var roomFlowManager = new RoomFlowManager();
         var inventoryController, equipmentController, characterController, eventLogController, roomController;
 
         function executeAction(action, actionArguments) {
@@ -8,7 +9,8 @@
                 equipmentController: equipmentController,
                 characterController: characterController,
                 eventLogController: eventLogController,
-                roomController: roomController
+                roomController: roomController,
+                roomFlowManager: roomFlowManager
             }, actionArguments);
         }
 
@@ -45,4 +47,4 @@
     var brpg = window.brpg || {};
     brpg.ActionExecutor = ActionExecutor;
     window.brpg = brpg;
-})(window);
+})(window, brpg.RoomFlowManager);

@@ -4,6 +4,10 @@
         var room;
         var view = new RoomView();
 
+        view.onAction(function(action) {
+            actionExecutor.executeAction(action.action);
+        });
+
         function setRoom(newRoom) {
             room = newRoom;
             view.renderWith(room.getRoomInfo());

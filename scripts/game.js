@@ -1,5 +1,8 @@
 ;
-(function(window, ActionExecutor, InventoryController, EquipmentController, CharacterController, EventLogController, RoomController, GoToNextRoomAction) {
+(function(window,
+          ActionExecutor,
+          InventoryController, EquipmentController, CharacterController, EventLogController, RoomController,
+          GoToNextRoomAction) {
     var Game = function() {
         var actionExecutor;
         var inventoryController, equipmentController, characterController, eventLogController, roomController;
