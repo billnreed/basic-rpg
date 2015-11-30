@@ -7,6 +7,11 @@
             equipmentController.addItem(item);
         }
 
+        function unequipItem(item) {
+            equipmentController.removeItem(item);
+            inventoryController.addItem(item);
+        }
+
         function setInventoryController(_inventoryController_) {
             inventoryController = _inventoryController_;
         }
@@ -17,6 +22,7 @@
 
         return {
             equipItem: equipItem,
+            unequipItem: unequipItem,
             setInventoryController: setInventoryController,
             setEquipmentController: setEquipmentController
         }

@@ -8,12 +8,16 @@
         inventory.addItem('stick');
         inventory.addItem('pants');
 
-
         view.onEquip(function(item) {
             userActions.equipItem(item);
         });
 
         view.renderWith(inventory.getItemsList());
+
+        function addItem(item) {
+            inventory.addItem(item);
+            view.renderWith(inventory.getItemsList());
+        }
 
         function removeItem(item) {
             inventory.removeItem(item);
@@ -21,6 +25,7 @@
         }
 
         return {
+            addItem: addItem,
             removeItem: removeItem
         }
     }

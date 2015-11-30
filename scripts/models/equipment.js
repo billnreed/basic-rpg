@@ -7,12 +7,18 @@
             items.push(item);
         }
 
+        function removeItem(item) {
+            var itemIndex = items.indexOf(item);
+            items.splice(itemIndex, 1);
+        }
+
         function getItemsList() {
             return items;
         }
 
         return {
             addItem: addItem,
+            removeItem: removeItem,
             getItemsList: getItemsList
         };
     }

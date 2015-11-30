@@ -1,0 +1,13 @@
+.equipment-item {
+
+}
+
+.equipment-item__name {
+
+}
+
+.equipment-item__action {
+    float: right;
+
+    cursor: pointer;
+}
