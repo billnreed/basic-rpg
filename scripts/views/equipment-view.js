@@ -16,7 +16,7 @@
                 var $equipmentItemName =
                     $('<span>')
                         .addClass('equipment-item__name')
-                        .text(item);
+                        .text(item.name);
 
                 var $equipmentItemAction =
                     $('<span>')

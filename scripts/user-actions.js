@@ -5,11 +5,13 @@
         function equipItem(item) {
             inventoryController.removeItem(item);
             equipmentController.addItem(item);
+            characterController.addStatsFromItem(item);
         }
 
         function unequipItem(item) {
             equipmentController.removeItem(item);
             inventoryController.addItem(item);
+            characterController.removeStatsFromItem(item);
         }
 
         function setInventoryController(_inventoryController_) {

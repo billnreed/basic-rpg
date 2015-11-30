@@ -7,9 +7,14 @@
             items.push(item);
         }
 
-        function removeItem(item) {
-            var itemIndex = items.indexOf(item);
-            items.splice(itemIndex, 1);
+        function removeItem(itemToRemove) {
+            items = items.map(function(item) {
+                if (item.name !== itemToRemove.name) {
+                    return item;
+                }
+            }).filter(function(item) {
+                return item != null;
+            });
         }
 
         function getItemsList() {

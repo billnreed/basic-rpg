@@ -11,7 +11,7 @@
                 var $inventoryItemName =
                     $('<span>')
                         .addClass('inventory-item__name')
-                        .text(item);
+                        .text(item.name);
 
                 var $inventoryItemEquipAction =
                     $('<span>')

@@ -1,12 +1,21 @@
-;(function(window, Inventory, InventoryView) {
+;
+(function(window, Inventory, InventoryView) {
 
     function InventoryController(_userActions_) {
         var userActions = _userActions_;
         var inventory = new Inventory();
         var view = new InventoryView();
 
-        inventory.addItem('stick');
-        inventory.addItem('pants');
+        inventory.addItem({
+            name: 'stick',
+            strength: 1,
+            defense: 0
+        });
+        inventory.addItem({
+            name: 'pants',
+            strength: 0,
+            defense: 1
+        });
 
         view.onEquip(function(item) {
             userActions.equipItem(item);
