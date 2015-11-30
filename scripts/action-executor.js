@@ -1,19 +1,14 @@
 ;(function(window) {
-    function UserActions() {
+    function ActionExecutor() {
         var inventoryController, equipmentController, characterController, eventLogController;
 
-        function equipItem(item) {
-            inventoryController.removeItem(item);
-            equipmentController.addItem(item);
-            characterController.addStatsFromItem(item);
-            eventLogController.equippedItem(item);
-        }
-
-        function unequipItem(item) {
-            equipmentController.removeItem(item);
-            inventoryController.addItem(item);
-            characterController.removeStatsFromItem(item);
-            eventLogController.unequippedItem(item);
+        function executeAction(action, actionArguments) {
+            action.apply({
+                inventoryController: inventoryController,
+                equipmentController: equipmentController,
+                characterController: characterController,
+                eventLogController: eventLogController
+            }, actionArguments);
         }
 
         function setInventoryController(_inventoryController_) {
@@ -33,8 +28,7 @@
         }
 
         return {
-            equipItem: equipItem,
-            unequipItem: unequipItem,
+            executeAction: executeAction,
             setInventoryController: setInventoryController,
             setEquipmentController: setEquipmentController,
             setCharacterController: setCharacterController,
@@ -43,6 +37,6 @@
     }
 
     var brpg = window.brpg || {};
-    brpg.UserActions = UserActions;
+    brpg.ActionExecutor = ActionExecutor;
     window.brpg = brpg;
 })(window);

@@ -1,5 +1,5 @@
 ;(function(window, Character, CharacterView) {
-    function CharacterController(userActions) {
+    function CharacterController() {
         var character = new Character();
         var view = new CharacterView();
 

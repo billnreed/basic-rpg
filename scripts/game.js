@@ -1,20 +1,20 @@
-;(function(window, UserActions, InventoryController, EquipmentController, CharacterController, EventLogController) {
+;(function(window, ActionExecutor, InventoryController, EquipmentController, CharacterController, EventLogController) {
     var Game = function() {
-        var userActions;
+        var actionExecutor;
         var inventoryController, equipmentController, characterController, eventLogController;
 
         function start() {
-            userActions = new UserActions();
+            actionExecutor = new ActionExecutor();
 
-            inventoryController = new InventoryController(userActions);
-            equipmentController = new EquipmentController(userActions);
+            inventoryController = new InventoryController(actionExecutor);
+            equipmentController = new EquipmentController(actionExecutor);
             characterController = new CharacterController();
             eventLogController = new EventLogController();
 
-            userActions.setInventoryController(inventoryController);
-            userActions.setEquipmentController(equipmentController);
-            userActions.setCharacterController(characterController);
-            userActions.setEventLogController(eventLogController);
+            actionExecutor.setInventoryController(inventoryController);
+            actionExecutor.setEquipmentController(equipmentController);
+            actionExecutor.setCharacterController(characterController);
+            actionExecutor.setEventLogController(eventLogController);
         }
 
         return {
@@ -25,4 +25,4 @@
     var brpg = window.brpg || {};
     brpg.Game = Game;
     window.brpg = brpg;
-})(window, brpg.UserActions, brpg.controllers.InventoryController, brpg.controllers.EquipmentController, brpg.controllers.CharacterController, brpg.controllers.EventLogController);
+})(window, brpg.ActionExecutor, brpg.controllers.InventoryController, brpg.controllers.EquipmentController, brpg.controllers.CharacterController, brpg.controllers.EventLogController);

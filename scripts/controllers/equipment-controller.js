@@ -1,10 +1,10 @@
-;(function(window, Equipment, EquipmentView) {
-    function EquipmentController(userActions) {
+;(function(window, Equipment, EquipmentView, UnequipItemAction) {
+    function EquipmentController(actionExecutor) {
         var equipment = new Equipment();
         var view = new EquipmentView();
 
         view.onUnequip(function(item) {
-            userActions.unequipItem(item);
+            actionExecutor.executeAction(UnequipItemAction, [item]);
         });
 
         function addItem(item) {
@@ -28,4 +28,4 @@
     brpg.controllers.EquipmentController = EquipmentController;
     window.brpg = brpg;
 
-})(window, brpg.models.Equipment, brpg.views.EquipmentView);
+})(window, brpg.models.Equipment, brpg.views.EquipmentView, brpg.actions.UnequipItemAction);

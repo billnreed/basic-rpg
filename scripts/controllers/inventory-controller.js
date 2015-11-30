@@ -1,8 +1,8 @@
 ;
-(function(window, Inventory, InventoryView) {
+(function(window, Inventory, InventoryView, EquipItemAction) {
 
-    function InventoryController(_userActions_) {
-        var userActions = _userActions_;
+    function InventoryController(_actionExecutor_) {
+        var actionExecutor = _actionExecutor_;
         var inventory = new Inventory();
         var view = new InventoryView();
 
@@ -18,7 +18,7 @@
         });
 
         view.onEquip(function(item) {
-            userActions.equipItem(item);
+            actionExecutor.executeAction(EquipItemAction, [item]);
         });
 
         view.renderWith(inventory.getItemsList());
@@ -44,4 +44,4 @@
     brpg.controllers.InventoryController = InventoryController;
     window.brpg = brpg;
 
-})(window, brpg.models.Inventory, brpg.views.InventoryView);
+})(window, brpg.models.Inventory, brpg.views.InventoryView, brpg.actions.EquipItemAction);
