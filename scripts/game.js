@@ -1,13 +1,10 @@
-;(function(window, InventoryController, Equipment) {
+;(function(window, InventoryController, EquipmentController) {
     var Game = function() {
-        var inventoryController, equipment;
+        var inventoryController, equipmentController;
 
         function start() {
             inventoryController = new InventoryController();
-
-
-            //make equipped items
-
+            equipmentController = new EquipmentController();
 
 
             //make event log
@@ -22,4 +19,4 @@
     var brpg = window.brpg || {};
     brpg.Game = Game;
     window.brpg = brpg;
-})(window, window.brpg.controllers.InventoryController, window.brpg.models.Equipment);
+})(window, window.brpg.controllers.InventoryController, window.brpg.controllers.EquipmentController);

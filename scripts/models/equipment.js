@@ -1,9 +1,19 @@
 ;(function(window) {
 
     function Equipment() {
+        var items = [];
+
+        function addItem(item) {
+            items.push(item);
+        }
+
+        function getItemsList() {
+            return items;
+        }
 
         return {
-
+            addItem: addItem,
+            getItemsList: getItemsList
         };
     }
 

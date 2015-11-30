@@ -19,7 +19,7 @@
             </div>
             <div class="equipment pane">
                 <div class="pane__title">Equipment</div>
-                <ul class="pane__list"></ul>
+                <ul class="pane__list js-equipment-list"></ul>
             </div>
             <div class="inventory pane">
                 <div class="pane__title">Inventory</div>
@@ -37,14 +37,15 @@
         <script src="scripts/models/inventory.js"></script>
         <script src="scripts/models/equipment.js"></script>
 
-        <!--view renderers-->
-        <script src="scripts/view-renderers/inventory-view-renderer.js"></script>
+        <!--views-->
+        <script src="scripts/views/inventory-view.js"></script>
 
-        <!--view-responders-->
-        <script src="scripts/view-responders/inventory-view-responder.js"></script>
+        <!--view renderers-->
+        <script src="scripts/views/equipment-view.js"></script>
 
         <!--controllers-->
         <script src="scripts/controllers/inventory-controller.js"></script>
+        <script src="scripts/controllers/equipment-controller.js"></script>
 
         <!--game-->
         <script src="scripts/game.js"></script>

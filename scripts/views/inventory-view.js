@@ -1,9 +1,10 @@
-;(function(window) {
-    function InventoryViewRenderer() {
-
+;
+(function(window) {
+    function InventoryView() {
         var $inventoryList = $('.js-inventory-list');
+        var onEquipCallback;
 
-        function updateInventoryWith(inventoryList) {
+        function renderWith(inventoryList) {
             $inventoryList.empty();
 
             inventoryList.forEach(function(item) {
@@ -12,26 +13,34 @@
                         .addClass('inventory-item__name')
                         .text(item);
 
-                var $inventoryItemActions =
+                var $inventoryItemEquipAction =
                     $('<span>')
                         .addClass('inventory-item__action js-equip-item')
-                        .text('equip');
+                        .text('equip')
+                        .click(function() {
+                                   onEquipCallback(item);
+                               });
 
                 $('<li>')
                     .addClass('inventory-item')
                     .append($inventoryItemName)
-                    .append($inventoryItemActions)
+                    .append($inventoryItemEquipAction)
                     .appendTo($inventoryList);
             });
         }
 
+        function onEquip(fn) {
+            onEquipCallback = fn;
+        }
+
         return {
-            updateInventoryWith: updateInventoryWith
+            renderWith: renderWith,
+            onEquip: onEquip
         }
     }
 
     var brpg = window.brpg || {};
-    brpg.viewRenderers = brpg.viewRenderers || {};
-    brpg.viewRenderers.InventoryViewRenderer = InventoryViewRenderer;
+    brpg.views = brpg.views || {};
+    brpg.views.InventoryView = InventoryView;
     window.brpg = brpg;
 })(window);

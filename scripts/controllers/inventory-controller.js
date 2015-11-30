@@ -1,14 +1,18 @@
-;(function(window, Inventory, InventoryViewRenderer, InventoryViewResponder) {
+;(function(window, Inventory, InventoryView) {
 
     function InventoryController() {
         var inventory = new Inventory();
-        var viewRenderer = new InventoryViewRenderer();
-        var viewResponder = new InventoryViewResponder();
+        var view = new InventoryView();
 
         inventory.addItem('stick');
         inventory.addItem('pants');
 
-        viewRenderer.updateInventoryWith(inventory.getItemsList());
+
+        view.onEquip(function(item) {
+            console.log('inventory item:', item);
+        });
+
+        view.renderWith(inventory.getItemsList());
     }
 
     var brpg = window.brpg || {};
@@ -16,4 +20,4 @@
     brpg.controllers.InventoryController = InventoryController;
     window.brpg = brpg;
 
-})(window, brpg.models.Inventory, brpg.viewRenderers.InventoryViewRenderer, brpg.viewResponders.InventoryViewResponder);
+})(window, brpg.models.Inventory, brpg.views.InventoryView);
