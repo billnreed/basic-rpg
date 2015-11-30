@@ -30,35 +30,43 @@
                 <ul class="pane__list js-inventory-list"></ul>
             </div>
             <div class="actions pane">
-                <div class="pane__title">Actions</div>
-                <div class="pane__content"></div>
+                <div class="pane__title js-room-title"></div>
+                <div class="pane__content">
+                    <div class="js-room-description"></div>
+                    <div class="js-room-actions"></div>
+                </div>
             </div>
         </div>
 
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
-        <!--actions-->
-        <script src="scripts/actions/equip-item-action.js"></script>
-        <script src="scripts/actions/unequip-item-action.js"></script>
-        <script src="scripts/action-executor.js"></script>
 
         <!--models-->
         <script src="scripts/models/inventory.js"></script>
         <script src="scripts/models/equipment.js"></script>
         <script src="scripts/models/character.js"></script>
         <script src="scripts/models/event-log.js"></script>
+        <script src="scripts/models/rooms/empty-room.js"></script>
 
         <!--views-->
         <script src="scripts/views/inventory-view.js"></script>
         <script src="scripts/views/equipment-view.js"></script>
         <script src="scripts/views/character-view.js"></script>
         <script src="scripts/views/event-log-view.js"></script>
+        <script src="scripts/views/room-view.js"></script>
+
+        <!--actions-->
+        <script src="scripts/actions/equip-item-action.js"></script>
+        <script src="scripts/actions/unequip-item-action.js"></script>
+        <script src="scripts/actions/go-to-next-room-action.js"></script>
+        <script src="scripts/action-executor.js"></script>
 
         <!--controllers-->
         <script src="scripts/controllers/inventory-controller.js"></script>
         <script src="scripts/controllers/equipment-controller.js"></script>
         <script src="scripts/controllers/character-controller.js"></script>
         <script src="scripts/controllers/event-log-controller.js"></script>
+        <script src="scripts/controllers/room-controller.js"></script>
 
         <!--game-->
         <script src="scripts/game.js"></script>

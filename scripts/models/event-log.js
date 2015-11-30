@@ -12,6 +12,11 @@
             events.push(message);
         }
 
+        function wentToRoom(room) {
+            var message = 'Entered ' + room.getRoomInfo().title;
+            events.push(message);
+        }
+
         function getMessages() {
             return events;
         }
@@ -19,6 +24,7 @@
         return {
             equippedItem: equippedItem,
             unequippedItem: unequippedItem,
+            wentToRoom: wentToRoom,
             getMessages: getMessages
         }
     }

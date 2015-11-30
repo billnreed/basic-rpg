@@ -1,6 +1,6 @@
 ;(function(window) {
     function EmptyRoom() {
-        var label = 'Empty room';
+        var title = 'Empty room';
         var description = 'It\'s an empty room.';
         var actions = [
             {
@@ -9,8 +9,15 @@
             }
         ];
 
-        return {
+        function getRoomInfo() {
+            return {
+                title: title,
+                description: description
+            };
+        }
 
+        return {
+            getRoomInfo: getRoomInfo
         }
     }
 

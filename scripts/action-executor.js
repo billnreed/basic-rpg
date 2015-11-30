@@ -1,13 +1,14 @@
 ;(function(window) {
     function ActionExecutor() {
-        var inventoryController, equipmentController, characterController, eventLogController;
+        var inventoryController, equipmentController, characterController, eventLogController, roomController;
 
         function executeAction(action, actionArguments) {
             action.apply({
                 inventoryController: inventoryController,
                 equipmentController: equipmentController,
                 characterController: characterController,
-                eventLogController: eventLogController
+                eventLogController: eventLogController,
+                roomController: roomController
             }, actionArguments);
         }
 
@@ -27,12 +28,17 @@
             eventLogController = _eventLogController_;
         }
 
+        function setRoomController(_roomController_) {
+            roomController = _roomController_;
+        }
+
         return {
             executeAction: executeAction,
             setInventoryController: setInventoryController,
             setEquipmentController: setEquipmentController,
             setCharacterController: setCharacterController,
-            setEventLogController: setEventLogController
+            setEventLogController: setEventLogController,
+            setRoomController: setRoomController
         }
     }
 

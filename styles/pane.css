@@ -5,14 +5,13 @@
 }
 
 .pane__title {
-    height: 10%;
-    margin-bottom: 5px;
+    height: 20%;
     font-size: 20px;
     color: #777;
 }
 
 .pane__content,
 .pane__list {
-    height: 90%;
+    height: 80%;
     overflow-y: scroll;
 }
